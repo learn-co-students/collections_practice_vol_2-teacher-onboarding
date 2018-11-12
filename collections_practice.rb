@@ -47,7 +47,7 @@ def merge_data(keys, data)
     end
 
   end
-    merged_data
+  merged_data
 end
 
 def find_cool(array)
