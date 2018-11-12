@@ -54,13 +54,13 @@ def find_cool(array)
   array.keep_if {|hash| hash[:temperature] == "cool"}
 end
 
-def organize_schools(array)
+def organize_schools(schools)
   organized_schools = {}
-  array.each do |school, location_hash|
-    location = location_hash[:location]
-    if organized_schools[location]
+  schools.each do |school, location_table|
+    location = location_table[:location]
+    if organized_schools[location] #if the school's location has an entry, add it to that array
       organized_schools[location] << school
-    else
+    else #else, set up a new location array and add the school to it
       organized_schools[location] = []
       organized_schools[location] << school
     end
